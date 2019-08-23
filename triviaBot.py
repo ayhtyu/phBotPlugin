@@ -6,16 +6,16 @@ import phBotChat
 import QtBind
 
 pName = 'triviaBot'
-pVersion = '0.1.2'
+pVersion = '0.1.4'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot.py'
 
-###################################################################
-qafolder = "triviaBot" 				# Subfolder of Plugins folder #
-qafile = "triviaBot.txt" 			# Place of saved Q & A file   #
-qacountrycodes = "countryCodes.txt"	# Place of country code Q & A #
-qacache = "cache.txt"				# if character cannot joined  #
-answertime = [3,9]					# Random interval to answer	  #
-###################################################################
+#######################################################################
+qafolder = "triviaBot" 					# Subfolder of Plugins folder #
+qafile = "triviaBot.txt" 				# Place of saved Q & A file   #
+qacountrycodes = "countryCodes.txt"		# Place of country code Q & A #
+qacache = "cache.txt"					# if character cannot joined  #
+answertime = [3,9]						# Random interval to answer	  #
+#######################################################################
 
 # if folder and files doesn't exists
 path = os.getcwd()
@@ -27,10 +27,10 @@ open("Plugins/"+qafolder+"/"+qacountrycodes, 'a+').close()
 # need for dont stop automatically save country code questions
 country = False
 
-#clear qacache file
+# clear qacache file
 open("Plugins/"+qafolder+"/"+qacache, 'w').close()
 
-#GUI
+# GUI
 gui = QtBind.init(__name__, "triviaBot")
 QtBind.createLabel(gui, 'triviaBot is automatically answers pearl sro trivia event questions and automatically adds new questions.', 10, 10)
 QtBind.createLabel(gui, 'Question List', 11, 38)
@@ -191,6 +191,6 @@ def handle_chat(t, player, msg):
 							break
 						a += 1
 
-log("triviaBot v"+pVersion+" plugin successfully loaded.")
+log("Plugin: triviaBot v"+pVersion+" plugin successfully loaded.")
 #do you want the questions to be loaded automatically when the plugin starts(maybe lag for a while)
 #gui_qlist()
