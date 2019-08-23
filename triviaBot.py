@@ -7,7 +7,7 @@ import QtBind
 
 pName = 'triviaBot'
 pVersion = '0.1.2'
-pUrl = 'https://raw.githubusercontent.com/ayhtyu/triviaBot/master/triviaBot.py'
+pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot.py'
 
 ###################################################################
 qafolder = "triviaBot" 				# Subfolder of Plugins folder #
