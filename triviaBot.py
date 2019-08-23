@@ -5,7 +5,7 @@ import os
 import phBotChat
 import QtBind
 
-pVersion = '1.0.0'
+pVersion = '0.0.2'
 pName = 'triviaBot'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/triviaBot/master/triviaBot.py'
 
