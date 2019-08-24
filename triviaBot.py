@@ -192,4 +192,4 @@ def handle_chat(t, player, msg):
 						a += 1
 
 log("Plugin: triviaBot v"+pVersion+" plugin successfully loaded.")
-gui_qlist()
+#gui_qlist()
