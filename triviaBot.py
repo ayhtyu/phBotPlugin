@@ -6,7 +6,7 @@ import phBotChat
 import QtBind
 
 pName = 'triviaBot'
-pVersion = '0.1.4'
+pVersion = '0.1.5'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot.py'
 
 #######################################################################
@@ -145,7 +145,7 @@ def save_q2_cache(a):
 	if "Silks" in a:
 		if country == False:
 			s = a.find('wrote') + 7
-			e = a.find('won', start) - 6
+			e = a.find('won', s) - 6
 			answer = a[s:e]
 			file.write(answer)
 		else:
