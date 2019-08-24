@@ -181,7 +181,7 @@ def handle_chat(t, player, msg):
 				while True:
 					if a == get_qa('l',0):
 						save_q2_cache(msg) # save question if dont know
-						Timer(randrange(15,30)+60, add_newq, ()).start() # automatically add questions to qafile and gui list
+						Timer(randrange(30,80), add_newq, ()).start() # automatically add questions to qafile and gui list
 						break
 					else:
 						if get_qa('q',a) == msg:
@@ -192,5 +192,4 @@ def handle_chat(t, player, msg):
 						a += 1
 
 log("Plugin: triviaBot v"+pVersion+" plugin successfully loaded.")
-#do you want the questions to be loaded automatically when the plugin starts(maybe lag for a while)
-#gui_qlist()
+gui_qlist()
