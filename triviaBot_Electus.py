@@ -6,7 +6,7 @@ import phBotChat
 import QtBind
 
 pName = 'triviaBot_Electus'
-pVersion = '0.1.6'
+pVersion = '0.1.7'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot_Electus.py'
 
 #######################################################################
@@ -26,7 +26,7 @@ open("Plugins/"+qafolder+"/"+qafile, 'a+').close()
 open("Plugins/"+qafolder+"/"+qacache, 'w').close()
 
 # GUI
-gui = QtBind.init(__name__, "triviaBot_Electus")
+gui = QtBind.init(__name__, "triviaBot")
 QtBind.createLabel(gui, 'triviaBot is automatically answers trivia event questions and automatically adds new questions.', 10, 10)
 QtBind.createLabel(gui, 'Questions List', 11, 38)
 QtBind.createButton(gui, 'gui_qlist', '   Refresh List   ', 448, 35)
@@ -147,7 +147,7 @@ def save_q2_cache(a):
 
 def handle_chat(t, player, msg):
 	if player == "[BOT]Trivia":
-		if "Reward" not in a and "earned" not in a:
+		if "Reward" not in msg and "earned" not in msg:
 			a = 0
 			while True:
 				if a == get_qa('l',0):
