@@ -26,7 +26,7 @@ open("Plugins/"+qafolder+"/"+qafile, 'a+').close()
 open("Plugins/"+qafolder+"/"+qacache, 'w').close()
 
 # GUI
-gui = QtBind.init(__name__, "triviaBot")
+gui = QtBind.init(__name__, "triviaBot_Electus")
 QtBind.createLabel(gui, 'triviaBot is automatically answers trivia event questions and automatically adds new questions.', 10, 10)
 QtBind.createLabel(gui, 'Questions List', 11, 38)
 QtBind.createButton(gui, 'gui_qlist', '   Refresh List   ', 448, 35)
