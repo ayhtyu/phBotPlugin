@@ -6,7 +6,7 @@ import phBotChat
 import QtBind
 
 pName = 'triviaBot'
-pVersion = '0.1.6'
+pVersion = '0.1.7'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot.py'
 
 #######################################################################
@@ -148,7 +148,7 @@ def save_q2_cache(a):
 	elif server == "xeon":
 		if "winner of this round" not in a and "Correct answer" not in a:
 			file.write('--\n'+a+'--')
-		elif "Correct answer" in a
+		elif "Correct answer" in a:
 			s = a.find('was') + 5
 			answer = a[s:-1]
 			file.write(answer)		
