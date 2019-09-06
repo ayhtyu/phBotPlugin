@@ -6,7 +6,7 @@ import phBotChat
 import QtBind
 
 pName = 'triviaBot'
-pVersion = '0.1.7'
+pVersion = '0.1.8'
 pUrl = 'https://raw.githubusercontent.com/ayhtyu/phBotPlugin/master/triviaBot.py'
 
 #######################################################################
@@ -173,7 +173,7 @@ def handle_chat(t, player, msg):
 							break
 						a += 1
 		elif server == "xeon":
-			if player == "[BOT]" and "winner of this round" not in msg:
+			if player == "[BOT]" and "winner of this round" not in msg and "no winner for this" not in msg:
 				a = 0
 				while True:
 					if a == get_qa('l',0):
